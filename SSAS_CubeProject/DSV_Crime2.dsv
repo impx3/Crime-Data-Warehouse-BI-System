@@ -1,0 +1,306 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6fbf27ea-0950-4446-a0ef-1ffd5ae808f5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DSV_Crime2</ID>
+  <Name>DSV_Crime2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>CrimeDW</DataSourceID>
+  <Schema>
+    <xs:schema id="DSV_Crime2" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="DSV_Crime2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="eee1d143-6e22-49a1-b80e-eb222396e9a5">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_CrimeFact" msprop:DbTableName="CrimeFact" msprop:FriendlyName="CrimeFact" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="3024b501-c568-4bc5-bbd6-6bf0fb5e29b2">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CrimeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="CrimeID" msprop:DbColumnName="CrimeID" msprop:design-time-name="6832e76c-b467-4866-8e0a-2e578b11912a" type="xs:int" />
+                  <xs:element name="DateID" msprop:FriendlyName="DateID" msprop:DbColumnName="DateID" msprop:design-time-name="4efcb79d-ff51-40f4-a4bb-fd830a5b5162" type="xs:int" minOccurs="0" />
+                  <xs:element name="TimeID" msprop:FriendlyName="TimeID" msprop:DbColumnName="TimeID" msprop:design-time-name="7b660c3e-8617-413f-a874-31bc19866f96" type="xs:int" minOccurs="0" />
+                  <xs:element name="LocationID" msprop:FriendlyName="LocationID" msprop:DbColumnName="LocationID" msprop:design-time-name="637ebff8-799e-416f-ae73-cb881f3fb668" type="xs:int" minOccurs="0" />
+                  <xs:element name="CrimeTypeID" msprop:FriendlyName="CrimeTypeID" msprop:DbColumnName="CrimeTypeID" msprop:design-time-name="9113b198-04b4-4087-9dd3-1116379840ae" type="xs:int" minOccurs="0" />
+                  <xs:element name="VictimID" msprop:FriendlyName="VictimID" msprop:DbColumnName="VictimID" msprop:design-time-name="e2e346dc-1ccf-40e7-82c2-fcc5482bbbf5" type="xs:int" minOccurs="0" />
+                  <xs:element name="WeaponID" msprop:FriendlyName="WeaponID" msprop:DbColumnName="WeaponID" msprop:design-time-name="d04d44d0-c387-487b-98fb-a2bd7716540f" type="xs:int" minOccurs="0" />
+                  <xs:element name="PremiseID" msprop:FriendlyName="PremiseID" msprop:DbColumnName="PremiseID" msprop:design-time-name="729538be-def4-40d9-aa60-3bf6a6367882" type="xs:int" minOccurs="0" />
+                  <xs:element name="StatusID" msprop:FriendlyName="StatusID" msprop:DbColumnName="StatusID" msprop:design-time-name="2f4a9496-5114-4ade-90cf-6ace3d0e4b84" type="xs:int" minOccurs="0" />
+                  <xs:element name="accm_txn_create_time" msprop:FriendlyName="accm_txn_create_time" msprop:DbColumnName="accm_txn_create_time" msprop:design-time-name="257daa48-9ff2-4138-8788-2c904e3d5fa5" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="accm_txn_complete_time" msprop:FriendlyName="accm_txn_complete_time" msprop:DbColumnName="accm_txn_complete_time" msprop:design-time-name="c2d92479-2b5c-4e3f-b0c4-c633d8ed1f65" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="txn_process_time_hours" msprop:FriendlyName="txn_process_time_hours" msprop:DbColumnName="txn_process_time_hours" msprop:design-time-name="f27323ef-3350-4af3-9d9d-8b033a01f6a8" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimStatus" msprop:DbTableName="DimStatus" msprop:FriendlyName="DimStatus" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="66baf2f3-ea08-4a2d-aa9e-e0b4746dd006">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StatusID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="StatusID" msprop:DbColumnName="StatusID" msprop:design-time-name="9729600c-2926-4178-be82-7b8898ee7d5d" type="xs:int" />
+                  <xs:element name="StatusCode" msprop:FriendlyName="StatusCode" msprop:DbColumnName="StatusCode" msprop:design-time-name="e06e9bd4-a0fc-47aa-aded-b80a55847281" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="StatusDescription" msprop:FriendlyName="StatusDescription" msprop:DbColumnName="StatusDescription" msprop:design-time-name="87b65730-2a25-4de2-a66c-397c85da1505" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SrcModifiedDate" msprop:FriendlyName="SrcModifiedDate" msprop:DbColumnName="SrcModifiedDate" msprop:design-time-name="e2eb626f-dc15-43f3-8f18-2c1bdc515d64" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="InsertDate" msprop:FriendlyName="InsertDate" msprop:DbColumnName="InsertDate" msprop:design-time-name="bd701179-41ab-4ed4-ae7a-4c767bb72897" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ModifiedDate" msprop:FriendlyName="ModifiedDate" msprop:DbColumnName="ModifiedDate" msprop:design-time-name="5697f11e-20c8-4151-a685-fa46dfbcc8dd" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="EndDate" msprop:FriendlyName="EndDate" msprop:DbColumnName="EndDate" msprop:design-time-name="e0bc813c-df47-4287-b7e0-1ccd42afaaf5" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="IsCurrent" msprop:FriendlyName="IsCurrent" msprop:DbColumnName="IsCurrent" msprop:design-time-name="6d8ece49-8c71-4bfd-836c-4c0cf8bc58ac" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimLocation" msprop:DbTableName="DimLocation" msprop:FriendlyName="DimLocation" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="4fd967b8-d3a2-48f6-a577-4deb6ee22801">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationID" msprop:FriendlyName="LocationID" msprop:DbColumnName="LocationID" msprop:design-time-name="85569d3c-fd6d-4eb9-9250-4a1d7c1559ec" type="xs:int" />
+                  <xs:element name="AreaID" msprop:FriendlyName="AreaID" msprop:DbColumnName="AreaID" msprop:design-time-name="4b9ca7f9-127a-4c15-b5b9-c74ebd2f206e" type="xs:int" minOccurs="0" />
+                  <xs:element name="LocationName" msprop:FriendlyName="LocationName" msprop:DbColumnName="LocationName" msprop:design-time-name="2eecf67c-b9e1-4884-b18e-5e4148af998c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Latitude" msprop:FriendlyName="Latitude" msprop:DbColumnName="Latitude" msprop:design-time-name="8c3cec81-8739-4da3-bf24-f1eb05fe333b" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Longitude" msprop:FriendlyName="Longitude" msprop:DbColumnName="Longitude" msprop:design-time-name="a0f55d82-0be9-44b9-ac56-c48997558ef2" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimWeapon" msprop:DbTableName="DimWeapon" msprop:FriendlyName="DimWeapon" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="cd728323-24a4-4592-a6e6-26de679a25fa">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WeaponID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="WeaponID" msprop:DbColumnName="WeaponID" msprop:design-time-name="9b566cde-e4d8-467f-b8f0-9c0ed2eeec8b" type="xs:int" />
+                  <xs:element name="WeaponUsedCode" msprop:FriendlyName="WeaponUsedCode" msprop:DbColumnName="WeaponUsedCode" msprop:design-time-name="7f6ab26d-cadf-4afa-9678-bf801e178bc2" type="xs:int" minOccurs="0" />
+                  <xs:element name="WeaponDescription" msprop:FriendlyName="WeaponDescription" msprop:DbColumnName="WeaponDescription" msprop:design-time-name="81643824-ea19-41dd-a573-0390868bd3ce" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimVictim" msprop:DbTableName="DimVictim" msprop:FriendlyName="DimVictim" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="d4a6eab7-5c7f-43cf-ba31-20754f67997c">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="VictimID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="VictimID" msprop:DbColumnName="VictimID" msprop:design-time-name="154294c0-8c9a-4ba0-bad7-75e1efcc7bb1" type="xs:int" />
+                  <xs:element name="Age" msprop:FriendlyName="Age" msprop:DbColumnName="Age" msprop:design-time-name="b879b1e5-e392-4641-b18d-7faa79660ec2" type="xs:int" minOccurs="0" />
+                  <xs:element name="Gender" msprop:FriendlyName="Gender" msprop:DbColumnName="Gender" msprop:design-time-name="c8eb9f66-22bc-4de1-bec8-e2ade7248775" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Country" msprop:FriendlyName="Country" msprop:DbColumnName="Country" msprop:design-time-name="6dad7d46-f33f-4114-bb63-99761fe7b6c9" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimTime" msprop:DbTableName="DimTime" msprop:FriendlyName="DimTime" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="b8f4e90c-a49e-4462-b993-73134c035961">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimeID" msprop:FriendlyName="TimeID" msprop:DbColumnName="TimeID" msprop:design-time-name="9b16dce8-b41e-4115-b06c-fa4d98005c75" type="xs:int" />
+                  <xs:element name="Hour" msprop:FriendlyName="Hour" msprop:DbColumnName="Hour" msprop:design-time-name="d72af4b4-4b20-48f4-93d1-f38b739462cd" type="xs:int" minOccurs="0" />
+                  <xs:element name="Minute" msprop:FriendlyName="Minute" msprop:DbColumnName="Minute" msprop:design-time-name="15c18b89-7aa0-4ec3-977e-ae805fb9bc16" type="xs:int" minOccurs="0" />
+                  <xs:element name="AMPM" msprop:FriendlyName="AMPM" msprop:DbColumnName="AMPM" msprop:design-time-name="4dd96156-bd4d-4147-ac47-99501c3cf5e5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SrcModifiedDate" msprop:FriendlyName="SrcModifiedDate" msprop:DbColumnName="SrcModifiedDate" msprop:design-time-name="38dde7af-f149-42ba-a570-1443dcf91d59" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="InsertDate" msprop:FriendlyName="InsertDate" msprop:DbColumnName="InsertDate" msprop:design-time-name="e97a1ae4-c158-4a4c-9386-4b26159a5365" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ModifiedDate" msprop:FriendlyName="ModifiedDate" msprop:DbColumnName="ModifiedDate" msprop:design-time-name="515639f7-6ba0-4a38-8274-ca95812315fa" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimCrime" msprop:DbTableName="DimCrime" msprop:FriendlyName="DimCrime" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="53ac9e54-2ad3-4341-9792-bb2c50f426c9">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CrimeTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="CrimeTypeID" msprop:DbColumnName="CrimeTypeID" msprop:design-time-name="bcd3a109-27d5-4d6c-82e9-5eabdd4509d7" type="xs:int" />
+                  <xs:element name="CrimeCode" msprop:FriendlyName="CrimeCode" msprop:DbColumnName="CrimeCode" msprop:design-time-name="2b7176db-ea57-4057-a4d3-ce307b116d6e" type="xs:int" minOccurs="0" />
+                  <xs:element name="CrimeDescription" msprop:FriendlyName="CrimeDescription" msprop:DbColumnName="CrimeDescription" msprop:design-time-name="a841580b-cd85-4f9d-a346-6014058e42c8" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimPremise" msprop:DbTableName="DimPremise" msprop:FriendlyName="DimPremise" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="1ad343d6-478e-4ec5-ad67-7a96c843bbd4">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PremiseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="PremiseID" msprop:DbColumnName="PremiseID" msprop:design-time-name="9d8540b6-ad49-436c-a395-8840bca76129" type="xs:int" />
+                  <xs:element name="PremiseCode" msprop:FriendlyName="PremiseCode" msprop:DbColumnName="PremiseCode" msprop:design-time-name="239e3c9a-04c2-4b36-add8-090de8067fda" type="xs:int" minOccurs="0" />
+                  <xs:element name="PremiseDescription" msprop:FriendlyName="PremiseDescription" msprop:DbColumnName="PremiseDescription" msprop:design-time-name="61288072-0245-4224-840c-2f1ebc236a08" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimDate" msprop:DbTableName="DimDate" msprop:FriendlyName="DimDate" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="1cfb94b9-5a95-4a99-bd24-931a56105819">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateID" msprop:FriendlyName="DateID" msprop:DbColumnName="DateID" msprop:design-time-name="517c1b2f-9d37-4693-aea0-2b85504ca5b1" type="xs:int" />
+                  <xs:element name="FullDate" msprop:FriendlyName="FullDate" msprop:DbColumnName="FullDate" msprop:design-time-name="46e0df12-c0b6-44f8-8869-9a5c791d2b48" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Day" msprop:FriendlyName="Day" msprop:DbColumnName="Day" msprop:design-time-name="2e7e2f6b-7165-40e3-9895-d07c2bcac8c0" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:FriendlyName="Month" msprop:DbColumnName="Month" msprop:design-time-name="759a81fb-faeb-44a4-8193-79b67c8b9c9f" type="xs:int" minOccurs="0" />
+                  <xs:element name="MonthName" msprop:FriendlyName="MonthName" msprop:DbColumnName="MonthName" msprop:design-time-name="893c96b7-defb-4722-b8ea-bcb7b8f943f8" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Quarter" msprop:FriendlyName="Quarter" msprop:DbColumnName="Quarter" msprop:design-time-name="08d0ad0a-100a-492e-ba40-048d8aaced47" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:FriendlyName="Year" msprop:DbColumnName="Year" msprop:design-time-name="e1945f79-1ce7-4fad-866d-308b75ac6eff" type="xs:int" minOccurs="0" />
+                  <xs:element name="SrcModifiedDate" msprop:FriendlyName="SrcModifiedDate" msprop:DbColumnName="SrcModifiedDate" msprop:design-time-name="75a7b97e-61d1-438d-bd90-0ff7bf90b33c" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="InsertDate" msprop:FriendlyName="InsertDate" msprop:DbColumnName="InsertDate" msprop:design-time-name="71f9036d-42f8-47e3-a146-13ff306c5c55" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ModifiedDate" msprop:FriendlyName="ModifiedDate" msprop:DbColumnName="ModifiedDate" msprop:design-time-name="3df37264-27ee-4ac5-b46e-83f2bf2aaf2b" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="IsWeekday" msprop:FriendlyName="IsWeekday" msprop:DbColumnName="IsWeekday" msprop:design-time-name="a2909248-5361-4bec-8b3a-26b14b82fed9" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="IsHolidayUSA" msprop:FriendlyName="IsHolidayUSA" msprop:DbColumnName="IsHolidayUSA" msprop:design-time-name="afb8070a-1ed5-414d-a4cd-2ff4dc73ab93" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="HolidayUSA" msprop:FriendlyName="HolidayUSA" msprop:DbColumnName="HolidayUSA" msprop:design-time-name="75458416-9774-4069-8be8-d841faf3a1fa" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="CrimeID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimStatus_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimStatus" />
+          <xs:field xpath="StatusID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimLocation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimLocation" />
+          <xs:field xpath="LocationID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimWeapon_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimWeapon" />
+          <xs:field xpath="WeaponID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimVictim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimVictim" />
+          <xs:field xpath="VictimID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimTime_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimTime" />
+          <xs:field xpath="TimeID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimCrime_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimCrime" />
+          <xs:field xpath="CrimeTypeID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimPremise_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimPremise" />
+          <xs:field xpath="PremiseID" />
+        </xs:unique>
+        <xs:unique name="dbo_DimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimDate" />
+          <xs:field xpath="DateID" />
+        </xs:unique>
+        <xs:keyref name="FK__CrimeFact__DateI__29221CFB" refer="dbo_DimDate_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="DateID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__Statu__2FCF1A8A" refer="dbo_DimStatus_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="StatusID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__Crime__2BFE89A6" refer="dbo_DimCrime_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="CrimeTypeID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__Premi__2EDAF651" refer="dbo_DimPremise_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="PremiseID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__Locat__2B0A656D" refer="dbo_DimLocation_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="LocationID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__TimeI__2A164134" refer="dbo_DimTime_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="TimeID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__Victi__2CF2ADDF" refer="dbo_DimVictim_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="VictimID" />
+        </xs:keyref>
+        <xs:keyref name="FK__CrimeFact__Weapo__2DE6D218" refer="dbo_DimWeapon_Constraint1">
+          <xs:selector xpath=".//dbo_CrimeFact" />
+          <xs:field xpath="WeaponID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <DSV_Crime2 xmlns="" />
+  </Schema>
+</DataSourceView>
