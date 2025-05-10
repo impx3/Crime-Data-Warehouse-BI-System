@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProjectInfo>
+    <Name>DWBI_Project_IT22124012</Name>
+    <LastWriteTime>2025-05-10T11:48:47.0174245Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>CrimeData_Load_Staging.dtsx</Name>
+      <LastWriteTime>2025-04-29T13:24:37.5995776Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CrimeData_Profiling.dtsx</Name>
+      <LastWriteTime>2025-04-29T13:25:54.1301427Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CrimeData_Load_DW.dtsx</Name>
+      <LastWriteTime>2025-05-01T14:23:39.7594907Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CrimeData_SCD_Load.dtsx</Name>
+      <LastWriteTime>2025-04-29T13:27:44.0279315Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>CrimeFact_Accum_Update.dtsx</Name>
+      <LastWriteTime>2025-05-10T11:48:43.1447324Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

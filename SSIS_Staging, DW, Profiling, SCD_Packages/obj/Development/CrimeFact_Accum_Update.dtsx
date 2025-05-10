@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/29/2025 8:27:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-P3"
+  DTS:CreatorName="DESKTOP-P3\Laptop Outlet"
+  DTS:DTSID="{4AC74F78-8AD3-45A9-AE30-D3F7A8241B05}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="CrimeFact_Accum_Update"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{D4EE9FFC-7CE7-4472-8F7A-BC14D7377CF8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CrimeFact_Update]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6FFAFCF7-8EA3-4D27-81CE-9402F9439A69}"
+      DTS:ObjectName="CrimeFact_Update">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\DWBI_Assignment\CrimeFact_Update.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CrimeID"
+              DTS:DTSID="{E94CCECC-2206-4034-9085-858ACF0BDB60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{9224F78F-24FD-4385-9E6C-CF5AA8030BE3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-P3.CrimeData_DataWarehouse.sqladmin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F1FAA510-C55B-48F8-8957-3F63661959E9}"
+      DTS:ObjectName="DESKTOP-P3.CrimeData_DataWarehouse.sqladmin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-P3;User ID=sqladmin;Initial Catalog=CrimeData_DataWarehouse;Provider=SQLOLEDB.1;Application Name=SSIS-CrimeFact_Accum_Update-{F1FAA510-C55B-48F8-8957-3F63661959E9}DESKTOP-P3.CrimeData_DataWarehouse.sqladmin;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/KmHRnqPT0CVJXvc57CBfAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAaBDJmjdq4Xboc567uXmntSPrxhSMTpSDde/Xm3XFfTwAAAAAOgAAAAAIAACAAAADA3MmXxJTxYCdEf0s2nc5FBteCLBqrKgbBQ3NIIUPqgRAAAADdaIgZe5BjYiGSa489GRRDQAAAAGbBavnmSaYkos9iTFM73dv7Cc6tuz/OQFrFc0/eVZM4+W9ZK8jSlO+yrtG3CUvCCI4QdLMfRK1aK4AmNNatvl4</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Update Completion Times"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2D59D321-6DCA-4D20-BBDB-134CF0BE5E37}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Completion Times"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update Completion Times\CrimeFact_Update"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="CrimeFact_Update"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Completion Times\CrimeFact_Update.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CrimeFact_Update]"
+                  connectionManagerRefId="Package.ConnectionManagers[CrimeFact_Update]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[CrimeID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].ExternalColumns[CrimeID]"
+                      length="50"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[CrimeID]"
+                      name="CrimeID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      length="50"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].ExternalColumns[CrimeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CrimeID" />
+                    <externalMetadataColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Completion Times\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update Completion Times\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Completion Times\Data Conversion.Inputs[Data Conversion Input].Columns[accm_txn_complete_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Update Completion Times\Data Conversion.Inputs[Data Conversion Input].Columns[CrimeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CrimeID"
+                      lineageId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[CrimeID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Update Completion Times\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[accm_txn_complete_time_converted]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[accm_txn_complete_time_converted]"
+                      name="accm_txn_complete_time_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[CrimeID_converted]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[CrimeID_converted]"
+                      name="CrimeID_converted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output].Columns[CrimeID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Update Completion Times\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Completion Times\update accm_txn_complete_time"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="update accm_txn_complete_time"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE CrimeFact SET accm_txn_complete_time = ? WHERE CrimeID = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Completion Times\update accm_txn_complete_time.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-P3.CrimeData_DataWarehouse.sqladmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-P3.CrimeData_DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time_converted]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time_converted"
+                      externalMetadataColumnId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[accm_txn_complete_time_converted]" />
+                    <inputColumn
+                      refId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input].Columns[CrimeID_converted]"
+                      cachedDataType="i4"
+                      cachedName="CrimeID_converted"
+                      externalMetadataColumnId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[CrimeID_converted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Completion Times\update txn_process_time_hours"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="update txn_process_time_hours"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE CrimeFact SET txn_process_time_hours = DATEDIFF(HOUR, accm_txn_create_time, accm_txn_complete_time) WHERE CrimeID = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Completion Times\update txn_process_time_hours.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-P3.CrimeData_DataWarehouse.sqladmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-P3.CrimeData_DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input].Columns[CrimeID_converted]"
+                      cachedDataType="i4"
+                      cachedName="CrimeID_converted"
+                      externalMetadataColumnId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output].Columns[CrimeID_converted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Completion Times\update txn_process_time_hours.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Completion Times\update txn_process_time_hours.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Completion Times\update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Completion Times\update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Completion Times\update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update Completion Times.Paths[Data Conversion Output]"
+              endId="Package\Update Completion Times\update accm_txn_complete_time.Inputs[OLE DB Command Input]"
+              name="Data Conversion Output"
+              startId="Package\Update Completion Times\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Update Completion Times.Paths[Flat File Source Output]"
+              endId="Package\Update Completion Times\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Update Completion Times\CrimeFact_Update.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Update Completion Times.Paths[OLE DB Command Output]"
+              endId="Package\Update Completion Times\update txn_process_time_hours.Inputs[OLE DB Command Input]"
+              name="OLE DB Command Output"
+              startId="Package\Update Completion Times\update accm_txn_complete_time.Outputs[OLE DB Command Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Update Completion Times"
+          TopLeft="85,38" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Update Completion Times">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Update Completion Times\update accm_txn_complete_time"
+          TopLeft="104,195" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Update Completion Times\Data Conversion"
+          TopLeft="144,102" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Update Completion Times\CrimeFact_Update"
+          TopLeft="142,8" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Update Completion Times\update txn_process_time_hours"
+          TopLeft="101,294" />
+        <EdgeLayout
+          Id="Package\Update Completion Times.Paths[Data Conversion Output]"
+          TopLeft="224.25,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Completion Times.Paths[OLE DB Command Output]"
+          TopLeft="221.25,237">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Completion Times.Paths[Flat File Source Output]"
+          TopLeft="226,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
