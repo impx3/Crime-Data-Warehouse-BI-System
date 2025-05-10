@@ -33,7 +33,11 @@ Using Python and pandas, I generated a realistic crime dataset with fields like 
 *crimefact_update:*
 
 A second Python script was used to generate a supplementary dataset containing:
+
  CrimeID  accm_txn_complete_time
+ 
  1    2025-04-30 10:00
+ 
  2    2025-04-30 13:45
+ 
 This CSV was used to simulate the “transaction complete time” for accumulating snapshot facts. I then updated the CrimeFact table using an SSIS package, calculating txn_process_time_hours as the difference between the completion time and create time.
