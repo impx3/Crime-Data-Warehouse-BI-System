@@ -1,4 +1,5 @@
 Designed and implemented an end-to-end Business Intelligence (BI) solution based on a simulated crime dataset (50,000+ records). This project involved building a robust ETL pipeline and data warehouse using the Microsoft BI stack.
+
 🔹 Built a Star Schema data warehouse with dimension and fact tables to support analytical reporting
 
 🔹 Developed ETL workflows in SSIS to extract, cleanse, transform, and load data from multiple sources (CSV & SQL)
