@@ -1,0 +1,1130 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{F192005E-C264-4ED3-A104-0A89A191208B}" Name="AreaDataProfiling">
+      <DtsConnectionManagerID>AreaDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4FD9693A-CA65-42C2-9335-D9B96529D0D8}" Name="AreaDataProfiling.xml">
+      <DtsConnectionManagerID>AreaDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{ECE3CA48-F93F-4CCE-BDC4-DF55AE57AF09}" Name="CrimeDataProfiling">
+      <DtsConnectionManagerID>CrimeDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{7EC7754B-235C-4A6C-9312-2C31AC9D5753}" Name="CrimeDataProfiling.xml">
+      <DtsConnectionManagerID>CrimeDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{BF1DAB70-84A1-41D8-A74A-C956BC21254C}" Name="CrimeDataProfiling.xml 1">
+      <DtsConnectionManagerID>CrimeDataProfiling.xml 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{969EAB70-4605-40C4-8709-11C98F19376F}" Name="CrimeTypeDataProfiling">
+      <DtsConnectionManagerID>CrimeTypeDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{643471B7-6731-4198-961B-141E201FCA09}" Name="CrimeTypeDataProfiling.xml">
+      <DtsConnectionManagerID>CrimeTypeDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{BE5012B3-63E8-4077-8B71-1275DC9097B3}" Name="DESKTOP-P3.CrimeData_Staging.sqladmin">
+      <DtsConnectionManagerID>DESKTOP-P3.CrimeData_Staging.sqladmin</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{6677D1ED-124A-474C-B85B-4AF59E883DCE}" Name="LocationDataProfiling">
+      <DtsConnectionManagerID>LocationDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3BC9D437-A072-450F-8CCB-F3CF21BAF723}" Name="LocationDataProfiling.xml">
+      <DtsConnectionManagerID>LocationDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{85FCDD41-29B5-4A20-A604-98520973C17F}" Name="PremiseDataProfiling">
+      <DtsConnectionManagerID>PremiseDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5F111341-927F-4317-B23C-206C47261F8F}" Name="PremiseDataProfiling.xml">
+      <DtsConnectionManagerID>PremiseDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{363E5BA9-2314-46BC-BA81-7FC07A9B53DA}" Name="StatusDataProfiling">
+      <DtsConnectionManagerID>StatusDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AC67D8CE-9B31-42D3-A1F2-C4E961656397}" Name="StatusDataProfiling.xml">
+      <DtsConnectionManagerID>StatusDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{77EFD3B9-D094-47BE-BEE7-333B6DFE9133}" Name="VictimCountryDataProfiling">
+      <DtsConnectionManagerID>VictimCountryDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{06FA2BAB-1F13-469E-820A-1799B1CEFE09}" Name="VictimCountryDataProfiling.xml">
+      <DtsConnectionManagerID>VictimCountryDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{47412274-0CE7-4424-BAD1-9118F292A76E}" Name="VictimGenderDataProfiling">
+      <DtsConnectionManagerID>VictimGenderDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{29D34679-A5F5-4ABB-84F4-EA56B8E10308}" Name="VictimGenderDataProfiling.xml">
+      <DtsConnectionManagerID>VictimGenderDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{C9A3D516-6E81-47DB-98B7-3214594D3E6A}" Name="WeaponUsedDataProfiling">
+      <DtsConnectionManagerID>WeaponUsedDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{85BC478D-92AE-4D01-9692-DD6F174E0F49}" Name="WeaponUsedDataProfiling.xml">
+      <DtsConnectionManagerID>WeaponUsedDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="Location_Staging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="AreaCode" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Latitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Longitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>63</MaxValue>
+        <Mean>32</Mean>
+        <StdDev>18.1842422626478</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="AreaCode" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>21</MaxValue>
+        <Mean>11</Mean>
+        <StdDev>6.05530070819498</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Latitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>24</MinValue>
+        <MaxValue>40</MaxValue>
+        <Mean>33.7777777777778</Mean>
+        <StdDev>3.25354236469594</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Longitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-122</MinValue>
+        <MaxValue>-73</MaxValue>
+        <Mean>-109.380952380952</Mean>
+        <StdDev>15.7746316048133</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="AreaCode" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Latitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Longitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>63</MaxValue>
+        <Mean>32</Mean>
+        <StdDev>18.1842422626478</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="AreaCode" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>21</MaxValue>
+        <Mean>11</Mean>
+        <StdDev>6.05530070819498</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Latitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>24</MinValue>
+        <MaxValue>40</MaxValue>
+        <Mean>33.7777777777778</Mean>
+        <StdDev>3.25354236469594</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="Longitude" SqlDbType="Decimal" MaxLength="0" Precision="28" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-122</MinValue>
+        <MaxValue>-73</MaxValue>
+        <Mean>-109.380952380952</Mean>
+        <StdDev>15.7746316048133</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>10</MinLength>
+        <MaxLength>55</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>37</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>38</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>39</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>45</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>55</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>10</MinLength>
+        <MaxLength>55</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>37</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>38</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>39</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>45</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>55</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <KeyColumns>
+          <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>false</IsExactKey>
+        <KeyStrength>0.984127</KeyStrength>
+        <KeyViolations>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Hollywood_Boulevard_Los_Angeles_CA</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+        </KeyViolations>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>62</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>500_Gallardost</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>77th_Street_and_Central_Ave_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bourbon_Street_New_Orleans_LA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Boyle_Heights_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Broadway_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bullock_St</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Calabasas_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Central_Ave_and_Vernon_Ave_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Central_Park_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chatsworth_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Compton_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Devonshire_Downs_Northridge_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Echo_Park_Lake_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fisherman's_Wharf_San_Francisco_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Florence-Firestone_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fremont_Street_Experience_Las_Vegas_NV</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>French_Quarter_New_Orleans_LA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Garden_District_New_Orleans_LA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Glendale_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Golden_Gate_Park_San_Francisco_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Granada_Hills_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Griffith_Observatory_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hollywood_Boulevard_Los_Angeles_CA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Key_West_FL</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Las_Vegas_Strip_Las_Vegas_NV</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lincoln_Center_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lombard_Street_San_Francisco_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Long_Beach_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lynwood_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Malibu_Pier_Malibu_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Marina_del_Rey_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Miami_Beach_Miami_FL</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North_Hollywood_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North_Lamar_Boulevard_Austin_TX</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Overseas_Highway_Florida_Keys_FL</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pacoima_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Panorama_City_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pasadena_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Porter_Ranch_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Red_Rock_Canyon_National_Conservation_Area_Las_Vegas_NV</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Route_66_(Various_Locations)</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San_Fernando_Mission_Mission_Hills_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San_Fernando_Valley_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa_Monica_Mountains_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa_Monica_Pier_Santa_Monica_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sixth_Street_Austin_TX</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Slauson_Ave_and_Broadway_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South_Central_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>St_George_St</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Studio_City_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sunset_Strip_West_Hollywood_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sylmar_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>The_Bowery_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Times_Square_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Topanga_State_Park_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Universal_Studios_Hollywood_Universal_City_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Valley_Village_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Venice_Beach_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wall_Street_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Watts_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Zilker_Park_Austin_TX</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <KeyColumns>
+          <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>false</IsExactKey>
+        <KeyStrength>0.984127</KeyStrength>
+        <KeyViolations>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Hollywood_Boulevard_Los_Angeles_CA</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+        </KeyViolations>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>62</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>500_Gallardost</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>77th_Street_and_Central_Ave_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bourbon_Street_New_Orleans_LA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Boyle_Heights_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Broadway_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bullock_St</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Calabasas_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Central_Ave_and_Vernon_Ave_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Central_Park_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chatsworth_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Compton_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Devonshire_Downs_Northridge_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Echo_Park_Lake_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fisherman's_Wharf_San_Francisco_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Florence-Firestone_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fremont_Street_Experience_Las_Vegas_NV</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>French_Quarter_New_Orleans_LA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Garden_District_New_Orleans_LA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Glendale_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Golden_Gate_Park_San_Francisco_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Granada_Hills_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Griffith_Observatory_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hollywood_Boulevard_Los_Angeles_CA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Key_West_FL</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Las_Vegas_Strip_Las_Vegas_NV</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lincoln_Center_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lombard_Street_San_Francisco_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Long_Beach_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lynwood_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Malibu_Pier_Malibu_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Marina_del_Rey_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Miami_Beach_Miami_FL</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North_Hollywood_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North_Lamar_Boulevard_Austin_TX</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Overseas_Highway_Florida_Keys_FL</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pacoima_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Panorama_City_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pasadena_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Porter_Ranch_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Red_Rock_Canyon_National_Conservation_Area_Las_Vegas_NV</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Route_66_(Various_Locations)</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San_Fernando_Mission_Mission_Hills_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San_Fernando_Valley_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa_Monica_Mountains_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa_Monica_Pier_Santa_Monica_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sixth_Street_Austin_TX</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Slauson_Ave_and_Broadway_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South_Central_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>St_George_St</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Studio_City_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sunset_Strip_West_Hollywood_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sylmar_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>The_Bowery_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Times_Square_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Topanga_State_Park_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Universal_Studios_Hollywood_Universal_City_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Valley_Village_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Venice_Beach_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wall_Street_New_York_City_NY</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Watts_Los_Angeles_CA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Zilker_Park_Austin_TX</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\w+</RegexText>
+            <Frequency>95</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="Location_Staging" RowCount="63" />
+        <Column Name="LocationName" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\w+</RegexText>
+            <Frequency>95</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

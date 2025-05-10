@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{F192005E-C264-4ED3-A104-0A89A191208B}" Name="AreaDataProfiling">
+      <DtsConnectionManagerID>AreaDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4FD9693A-CA65-42C2-9335-D9B96529D0D8}" Name="AreaDataProfiling.xml">
+      <DtsConnectionManagerID>AreaDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{ECE3CA48-F93F-4CCE-BDC4-DF55AE57AF09}" Name="CrimeDataProfiling">
+      <DtsConnectionManagerID>CrimeDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{7EC7754B-235C-4A6C-9312-2C31AC9D5753}" Name="CrimeDataProfiling.xml">
+      <DtsConnectionManagerID>CrimeDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{BF1DAB70-84A1-41D8-A74A-C956BC21254C}" Name="CrimeDataProfiling.xml 1">
+      <DtsConnectionManagerID>CrimeDataProfiling.xml 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{969EAB70-4605-40C4-8709-11C98F19376F}" Name="CrimeTypeDataProfiling">
+      <DtsConnectionManagerID>CrimeTypeDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{643471B7-6731-4198-961B-141E201FCA09}" Name="CrimeTypeDataProfiling.xml">
+      <DtsConnectionManagerID>CrimeTypeDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{BE5012B3-63E8-4077-8B71-1275DC9097B3}" Name="DESKTOP-P3.CrimeData_Staging.sqladmin">
+      <DtsConnectionManagerID>DESKTOP-P3.CrimeData_Staging.sqladmin</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{6677D1ED-124A-474C-B85B-4AF59E883DCE}" Name="LocationDataProfiling">
+      <DtsConnectionManagerID>LocationDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3BC9D437-A072-450F-8CCB-F3CF21BAF723}" Name="LocationDataProfiling.xml">
+      <DtsConnectionManagerID>LocationDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{85FCDD41-29B5-4A20-A604-98520973C17F}" Name="PremiseDataProfiling">
+      <DtsConnectionManagerID>PremiseDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5F111341-927F-4317-B23C-206C47261F8F}" Name="PremiseDataProfiling.xml">
+      <DtsConnectionManagerID>PremiseDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{363E5BA9-2314-46BC-BA81-7FC07A9B53DA}" Name="StatusDataProfiling">
+      <DtsConnectionManagerID>StatusDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AC67D8CE-9B31-42D3-A1F2-C4E961656397}" Name="StatusDataProfiling.xml">
+      <DtsConnectionManagerID>StatusDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{77EFD3B9-D094-47BE-BEE7-333B6DFE9133}" Name="VictimCountryDataProfiling">
+      <DtsConnectionManagerID>VictimCountryDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{06FA2BAB-1F13-469E-820A-1799B1CEFE09}" Name="VictimCountryDataProfiling.xml">
+      <DtsConnectionManagerID>VictimCountryDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{47412274-0CE7-4424-BAD1-9118F292A76E}" Name="VictimGenderDataProfiling">
+      <DtsConnectionManagerID>VictimGenderDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{29D34679-A5F5-4ABB-84F4-EA56B8E10308}" Name="VictimGenderDataProfiling.xml">
+      <DtsConnectionManagerID>VictimGenderDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{C9A3D516-6E81-47DB-98B7-3214594D3E6A}" Name="WeaponUsedDataProfiling">
+      <DtsConnectionManagerID>WeaponUsedDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{85BC478D-92AE-4D01-9692-DD6F174E0F49}" Name="WeaponUsedDataProfiling.xml">
+      <DtsConnectionManagerID>WeaponUsedDataProfiling.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table Schema="dbo" Table="VictimGender_Staging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <KeyColumns>
+          <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>F</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <KeyColumns>
+          <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>F</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <KeyColumns>
+          <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Female</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Male</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Not Available</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <KeyColumns>
+          <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Female</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Male</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Not Available</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>NA</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>M</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>F</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>NOT AVAILABLE</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>FEMALE</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>MALE</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>NA</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>M</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>F</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq1" IsExact="true">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>NOT AVAILABLE</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>FEMALE</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>MALE</RegexText>
+            <Frequency>33</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <DeterminantColumns>
+          <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <DeterminantColumns>
+          <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <DeterminantColumns>
+          <Column Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{BE5012B3-63E8-4077-8B71-1275DC9097B3}</DataSourceID>
+        <Table DataSource="DESKTOP-P3" Database="CrimeData_Staging" Schema="dbo" Table="VictimGender_Staging" RowCount="3" />
+        <DeterminantColumns>
+          <Column Name="GenderDescription" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="GenderCode" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
