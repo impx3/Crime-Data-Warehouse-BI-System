@@ -16,7 +16,21 @@ Designed and implemented an end-to-end Business Intelligence (BI) solution based
 🔹 Extended the fact table for accumulating snapshot metrics using derived fields (e.g., transaction processing time)
 
 🔹 Published and demonstrated interactive Power BI dashboards with,
-matrix tables - Report 1
-multiple slicers - Report 
-drill-down - Report 2
+matrix tables - Report 1, 
+multiple slicers - Report 2,  
+drill-down - Report 3, 
 drill-through reports - Report 4
+
+Tools: SSIS, SSAS, Power BI, SQL Server, Excel, Data Warehousing, OLAP, ETL
+
+**Brief Description of My Data Generation Scripts**
+
+CrimeData Generator:
+Using Python and pandas, I generated a realistic crime dataset with fields like DateOfOccurrence, TimeOfOccurrence, AreaCode, CrimeCode, PremiseCode, WeaponCode, etc. The script ensured relationships with lookup tables, unique CrimeIDs, and timestamped rows to simulate real-world crime incidents for 50,000 records.
+
+crimefact_update:
+A second Python script was used to generate a supplementary dataset containing:
+ CrimeID  accm_txn_complete_time
+ 1    2025-04-30 10:00
+ 2    2025-04-30 13:45
+This CSV was used to simulate the “transaction complete time” for accumulating snapshot facts. I then updated the CrimeFact table using an SSIS package, calculating txn_process_time_hours as the difference between the completion time and create time.
