@@ -25,10 +25,12 @@ Tools: SSIS, SSAS, Power BI, SQL Server, Excel, Data Warehousing, OLAP, ETL
 
 **Brief Description of My Data Generation Scripts**
 
-CrimeData Generator:
+*CrimeData Generator:*
+
 Using Python and pandas, I generated a realistic crime dataset with fields like DateOfOccurrence, TimeOfOccurrence, AreaCode, CrimeCode, PremiseCode, WeaponCode, etc. The script ensured relationships with lookup tables, unique CrimeIDs, and timestamped rows to simulate real-world crime incidents for 50,000 records.
 
-crimefact_update:
+*crimefact_update:*
+
 A second Python script was used to generate a supplementary dataset containing:
  CrimeID  accm_txn_complete_time
  1    2025-04-30 10:00
