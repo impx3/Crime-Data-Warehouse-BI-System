@@ -1,4 +1,4 @@
-Designed and implemented an end-to-end Business Intelligence (BI) solution based on a simulated crime dataset (50,000+ records). This project involved building a robust ETL pipeline and data warehouse using the Microsoft BI stack.
+Designed and implemented an end-to-end Business Intelligence (BI) solution based on a simulated crime dataset (50,000 records). This project involved building a robust ETL pipeline and data warehouse using the Microsoft BI stack.
 
 🔹 Built a Star Schema data warehouse with dimension and fact tables to support analytical reporting
 
@@ -16,13 +16,9 @@ Designed and implemented an end-to-end Business Intelligence (BI) solution based
   
 🔹 Extended the fact table for accumulating snapshot metrics using derived fields (e.g., transaction processing time)
 
-🔹 Published and demonstrated interactive Power BI dashboards with,
-matrix tables - Report 1, 
-multiple slicers - Report 2,  
-drill-down - Report 3, 
-drill-through reports - Report 4
+🔹 Published and demonstrated interactive Power BI dashboards with: matrix tables - Report 1, multiple slicers - Report 2,  drill-down - Report 3, drill-through reports - Report 4
 
-Tools: SSIS, SSAS, Power BI, SQL Server, Excel, Data Warehousing, OLAP, ETL
+**Tools:** SSIS, SSAS, Power BI, SQL Server, Excel, Data Warehousing, OLAP, ETL
 
 **Brief Description of My Data Generation Scripts**
 
@@ -41,3 +37,5 @@ A second Python script was used to generate a supplementary dataset containing:
  2    2025-04-30 13:45
  
 This CSV was used to simulate the “transaction complete time” for accumulating snapshot facts. I then updated the CrimeFact table using an SSIS package, calculating txn_process_time_hours as the difference between the completion time and create time.
+
+Original dataset: <a href="https://www.kaggle.com/datasets/shubhrarana/crimedatasetla">CrimeData </a>
